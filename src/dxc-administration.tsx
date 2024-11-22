@@ -48,7 +48,7 @@ export default () => {
           header-title=""
         ></IxContentHeader>
 
-<IxCardList label="Overview" listStyle={'stack'}>
+<IxCardList label="Overview" showAllCount={4} listStyle={'stack'}>
         <IxPushCard
           icon="project-server"
           notification="3"
