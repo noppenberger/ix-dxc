@@ -12,7 +12,7 @@ import {
   IxMenuSettings,
   IxMenuSettingsItem,
   IxCardList,
-  IxPushCard
+  IxPushCard,
 } from '@siemens/ix-react';
 
 
@@ -22,19 +22,20 @@ export default () => {
     <IxApplication>
       <IxApplicationHeader name="DxC Administration">
         <div slot="logo">
-          <img className="logo" src="https://ix.siemens.io/img/logo.svg" alt="Siemens Industrial Experience" aria-label="Siemens Industrial Experience"/></div>
+          <img className="logo" src="https://ix.siemens.io/img/logo.svg" alt="Siemens DxC Administration" aria-label="Siemens DxC Administration"/></div>
         <IxAvatar>
-          <IxDropdownItem label="Action 1"></IxDropdownItem>
-          <IxDropdownItem label="Action 2"></IxDropdownItem>
-          <IxDropdownItem label="Action 3"></IxDropdownItem>
+          <IxDropdownItem icon="user-profile" label="Profile"></IxDropdownItem>
+          <IxDropdownItem icon="log-out" label="Logout"></IxDropdownItem>
         </IxAvatar>
       </IxApplicationHeader>
       <IxMenu>
         <IxMenuItem tab-icon="home">Overview</IxMenuItem>
         <IxMenuItem tab-icon="add-application">Add AAS server</IxMenuItem>
-        
+        <IxMenuItem tab-icon="list">Manage AAS servers</IxMenuItem>
         <IxMenuItem tab-icon="consistency-check">Compliance checks</IxMenuItem>
-        <IxMenuItem tab-icon="info" slot="bottom">Terms and conditions</IxMenuItem>
+        <IxMenuItem tab-icon="analyze">Server analytics</IxMenuItem>
+
+        <IxMenuItem tab-icon="info" slot="bottom">Terms and conditions</IxMenuItem> 
         <IxMenuSettings>
           <IxMenuSettingsItem label="Example Setting 1"></IxMenuSettingsItem>
           <IxMenuSettingsItem label="Example Setting 2"></IxMenuSettingsItem>
@@ -44,45 +45,40 @@ export default () => {
       <IxContent>
         <IxContentHeader
           slot="header"
-          header-title="Choose breakpoint"
+          header-title=""
         ></IxContentHeader>
+
+<IxCardList label="Overview" listStyle={'stack'}>
         <IxPushCard
-      icon="bulb"
-      notification="99"
-      heading="Heading content"
-      subheading="Subheading"
-      variant="insight"
-    >
-      <table className="table">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colSpan={2}>Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </table>
-    </IxPushCard>
+          icon="project-server"
+          notification="3"
+          heading="AAS Servers registered"
+          subheading="Server registry"
+          variant="notification"
+        ></IxPushCard>
+        <IxPushCard
+          icon="history"
+          notification="1 hour ago"
+          heading="Last crawling"
+          subheading="Database up to date"
+          variant="warning"
+        ></IxPushCard>
+        <IxPushCard
+          icon="consistency-check"
+          notification="Compliance"
+          heading="Checks successful"
+          subheading="No issues found"
+          variant="success"
+        ></IxPushCard>
+        <IxPushCard
+          icon="optimize"
+          notification="Analytics"
+          heading="Checks successful"
+          subheading="Subheading"
+          variant="success"
+        ></IxPushCard>
+      </IxCardList>
+
       </IxContent>
 
     </IxApplication>
