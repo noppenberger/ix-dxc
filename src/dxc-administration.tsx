@@ -7,11 +7,11 @@ import {
   IxAvatar,
   IxContent,
   IxContentHeader,
-  IxDropdownButton,
   IxDropdownItem,
-  IxIconButton,
   IxMenu,
   IxMenuItem,
+  IxMenuSettings,
+  IxMenuSettingsItem
 } from '@siemens/ix-react';
 
 import { useState } from 'react';
@@ -30,8 +30,14 @@ export default () => {
         </IxAvatar>
       </IxApplicationHeader>
       <IxMenu>
-        <IxMenuItem>Item 1</IxMenuItem>
-        <IxMenuItem>Item 2</IxMenuItem>
+        <IxMenuItem tab-icon="add-application">Add AAS server</IxMenuItem>
+        <IxMenuItem tab-icon="list">Registered AAS servers</IxMenuItem>
+        <IxMenuItem tab-icon="consistency-check">Compliance checks</IxMenuItem>
+        <IxMenuItem tab-icon="info" slot="bottom">Terms and conditions</IxMenuItem>
+        <IxMenuSettings>
+          <IxMenuSettingsItem label="Example Setting 1"></IxMenuSettingsItem>
+          <IxMenuSettingsItem label="Example Setting 2"></IxMenuSettingsItem>
+        </IxMenuSettings>
       </IxMenu>
 
       <IxContent>

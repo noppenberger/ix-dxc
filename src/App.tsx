@@ -1,5 +1,5 @@
-import ApplicationBreakpoints from './application-breakpoints';
+import DxcAdministration from './dxc-administration';
 
 export default function App() {
-  return <ApplicationBreakpoints />;
+  return <DxcAdministration />;
 }
