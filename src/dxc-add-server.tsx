@@ -20,7 +20,7 @@ export default () => {
   
   return (
     <IxApplication>
-      <IxApplicationHeader name="DxC Administration">
+      <IxApplicationHeader name="DxC Administration | Add servers">
         <div slot="logo">
           <img className="logo" src="https://ix.siemens.io/img/logo.svg" alt="Siemens DxC Administration" aria-label="Siemens DxC Administration"/></div>
         <IxAvatar>
@@ -58,7 +58,7 @@ export default () => {
         ></IxPushCard>
         <IxPushCard
           icon="history"
-          notification="1 hour ago"
+          notification="1 day ago"
           heading="Last crawling"
           subheading="Database up to date"
           variant="warning"
@@ -72,9 +72,9 @@ export default () => {
         ></IxPushCard>
         <IxPushCard
           icon="optimize"
-          notification="Analytics"
-          heading="Checks successful"
-          subheading="Subheading"
+          notification="34930"
+          heading="Assets in subscription"
+          subheading="Analytics"
           variant="success"
         ></IxPushCard>
       </IxCardList>
